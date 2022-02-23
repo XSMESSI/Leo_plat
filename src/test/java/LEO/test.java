@@ -27,4 +27,10 @@ public class test {
         System.out.println(">>>>>>>>");
         System.out.println(firstService.count());
     }
+
+    @Test
+    public void testInsert(){
+        firstService.insertInfo();
+        System.out.println("firstService = " + "插入成功");
+    }
 }

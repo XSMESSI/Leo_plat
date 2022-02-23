@@ -1,5 +1,6 @@
 package LEO.entity.dataBase;
 
+import io.swagger.models.auth.In;
 import lombok.Data;
 
 /**
@@ -10,12 +11,24 @@ import lombok.Data;
 @Data
 public class Person {
 
-    private String id;
+    /**
+     * 主键id
+     */
+    private Integer id;
 
+    /**
+     * 姓名
+     */
     private String name;
 
+    /**
+     * 年龄
+     */
     private Integer age;
 
+    /**
+     * 信息
+     */
     private String message;
 
 }

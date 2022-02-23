@@ -17,6 +17,8 @@ public interface FirstService {
      */
     List<Person> listInfo();
 
+    void insertInfo();
+
     Integer count();
 
 }

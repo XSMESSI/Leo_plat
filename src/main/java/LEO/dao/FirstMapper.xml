@@ -7,4 +7,12 @@
         SELECT id,`name`,age,message
         FROM leo_first
     </select>
+
+    <!--动态生成id插入数据-->
+    <insert id="insertInfo" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO leo_first(`name`,age,message)VALUES
+        <foreach collection="list" item="item" separator=",">
+            (#{item.name},#{item.age},#{item.message})
+        </foreach>
+    </insert>
 </mapper>

@@ -2,6 +2,7 @@ package LEO.dao;
 
 import LEO.entity.dataBase.Person;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -18,4 +19,10 @@ public interface FirstDao {
      * @return
      */
     List<Person> getListInfo();
+
+    /**
+     * 用于获取动态生成id
+     * @param list
+     */
+    Integer insertInfo(@Param("list") List<Person> list);
 }
