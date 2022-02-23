@@ -42,12 +42,12 @@ public class FirstServiceImpl implements FirstService {
         list.add(param);
         list.add(param1);
         Integer num = firstDao.insertInfo(list);
-        //插入数据的行数进行展示
+        //插入数据的行数
         System.out.println("插入数据的条数num = " + num);
         List<Integer> ids = new ArrayList<>();
         ids.add(param.getId());
         ids.add(param1.getId());
-        //自动生成的id值进行输出
+        //自动生成的id值输出
         System.out.println("generated value = " + ids);
     }
 
